@@ -37,7 +37,11 @@ namespace Blackjack
             // Get name and value
             switch (value)
             {
-                // These three values have different names from their values.
+                // These four values have different names from their values.
+                case 1:
+                    Value = value;
+                    Name = "A";
+                    break;
                 case 11:
                     Value = 10;
                     Name = "J";
