@@ -97,7 +97,11 @@ namespace Blackjack
                     else
                     {
                         // Output the winner when dealer is standing.
-                        Console.WriteLine(dealer.FinalValue > player.FinalValue ? "Dealer has the highest hand. Dealer wins." : "You have the highest hand. You win!");
+                        if (dealer.FinalValue == player.FinalValue)
+                            Console.WriteLine("Your hands have the same value. It is a draw.");
+                        else
+                            Console.WriteLine(dealer.FinalValue > player.FinalValue ? "Dealer has the highest hand. Dealer wins." : "You have the highest hand. You win!");
+                        
                         isRunning = false;
                         break; // Break loop when the game ends.
                     }
