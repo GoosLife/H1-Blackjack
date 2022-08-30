@@ -63,7 +63,6 @@ namespace Blackjack
                 // If this is a player hand, player automatically wins.
                 // If this is a dealer hand, player will keep playing.
                 PossibleValues.Add(21);
-                GetHighestValue();
                 return;
             }
 
@@ -71,7 +70,6 @@ namespace Blackjack
             if (valueAcesHigh == valueAcesLow)
             {
                 PossibleValues.Add(valueAcesHigh);
-                GetHighestValue();
                 return;
             }
 
@@ -79,7 +77,6 @@ namespace Blackjack
             else if (valueAcesHigh > 21)
             {
                 PossibleValues.Add(valueAcesLow);
-                GetHighestValue();
                 return;
             }
 
@@ -88,7 +85,6 @@ namespace Blackjack
             {
                 PossibleValues.Add(valueAcesLow);
                 PossibleValues.Add(valueAcesHigh);
-                GetHighestValue();
             }
         }
 
